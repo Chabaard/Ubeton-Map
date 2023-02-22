@@ -84,6 +84,14 @@
     width: 100%;
     text-align: center;
 }
+
+.ubeton-city {
+    max-width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding-bottom: 7px;
+}
 .ubeton-bought {
     font-size: 1.5rem;
     display: none;

@@ -1,4 +1,6 @@
   // L vient du package internet de leaflet
+  const url = 'http://localhost:3316/excess';
+
   const app = {
     map: L.map('ubeton-map'),
     markers: [],
@@ -30,7 +32,7 @@
             },
         }
     },
-    // fake data
+
     listExcess: [
 
     ],
@@ -66,7 +68,7 @@
             // affiche les markes sous conditions
             if (distance < area) {
                 excess.marker = app.createMarker(excess)
-            }
+            } 
         });
             
     },
@@ -148,10 +150,10 @@
         return newMarker;
     },
     async getExcessesFromAPI() {
-        const url = 'http://localhost:3316/excess';
       
         try {
           const response = await fetch(url);
+          
       
           if (response.ok) {
             const data = await response.json();
