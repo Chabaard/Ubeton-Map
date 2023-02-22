@@ -97,7 +97,7 @@
             const container = document.querySelectorAll("#ubeton-container-cards");
             if (container[1]) container[1].remove();
             container[0].innerHTML = '';
-
+            for (let i = 0; i < 4; i++){
             listData.forEach((data) => {
                     const template = document.getElementById("ubeton-cards");
                     const clone = template.content.cloneNode(true);
@@ -119,19 +119,8 @@
                     })
                     container[0].appendChild(clone);
             });
-            if (listData.length >= 4 ){
-                container[0].style.animation = `scroll ${listData.length * 5}s linear infinite`;
-                container[0].style.width = `none`;  
-                container[0].classList.remove("ubeton-max-width");
-
-                document.getElementById("ubeton-container").appendChild(container[0].cloneNode(true));
-            }
-            else {
-                document.getElementById("ubeton-container-cards").classList.add("ubeton-max-width");
-                container[0].style.animation = ``;
-            }
-
-        }
+            
+        }}
     },
     createMarker(excess) {
         excess.isActive = true;
