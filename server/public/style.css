@@ -6,7 +6,7 @@
         transform: translateX(0);
     }
     100% {
-        transform: translateX(calc(-176px * 4));
+        transform: translateX(calc(-176px * 10));
     }
 }
 
@@ -17,6 +17,7 @@
     text-align: center;
     justify-content: center;
 }
+
 .icon-marker{
     filter: grayscale(40%);
 }
@@ -39,14 +40,15 @@
     gap: 1rem;
     justify-content: flex-start;
 }
-.ubeton-max-width {
-    width: 100%;
-}
+
 #ubeton-container-cards {
     color: #2eb473;
     height: 100px;
     display: flex;
     gap: 1rem;
+    width: 100%;
+    animation: scroll 50s linear infinite ;
+    justify-content: flex-start;
 }
 #ubeton-container:hover #ubeton-container-cards{
     animation-play-state: paused;
@@ -83,6 +85,14 @@
     max-width: 80px;
     width: 100%;
     text-align: center;
+}
+
+.ubeton-city {
+    max-width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding-bottom: 7px;
 }
 .ubeton-bought {
     font-size: 1.5rem;
